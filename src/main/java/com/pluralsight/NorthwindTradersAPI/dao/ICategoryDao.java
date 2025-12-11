@@ -12,6 +12,6 @@ public interface ICategoryDao {
     //C(R)UD
     List<Category> getAll();
 
-    Category findById(int id);
+    Category getById(int id);
 
 }

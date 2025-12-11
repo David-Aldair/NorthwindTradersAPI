@@ -11,6 +11,6 @@ public interface IProductDao {
     //C(R)UD
     List<Product> getAll();
 
-    Product findById(int id);
+    Product getById(int id);
 
 }

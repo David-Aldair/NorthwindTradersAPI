@@ -3,19 +3,39 @@ package com.pluralsight.NorthwindTradersAPI.models;
 public class Product {
 
     //properties
+    private Integer productId;
+    private String productName;
     private Integer categoryId;
-    private String categoryName;
+    private Double unitPrice;
 
     //constructor with no parameters
     public Product(){}
 
     //constructor with parameters
-    public Product(String categoryName, Integer categoryId) {
-        this.categoryName = categoryName;
+    public Product(Integer productId, String productName, Integer categoryId, Double unitPrice) {
+        this.productId = productId;
+        this.productName = productName;
         this.categoryId = categoryId;
+        this.unitPrice = unitPrice;
     }
 
     //getters and setters
+    public Integer getProductId() {
+        return productId;
+    }
+
+    public void setProductId(Integer productId) {
+        this.productId = productId;
+    }
+
+    public String getProductName() {
+        return productName;
+    }
+
+    public void setProductName(String productName) {
+        this.productName = productName;
+    }
+
     public Integer getCategoryId() {
         return categoryId;
     }
@@ -24,19 +44,21 @@ public class Product {
         this.categoryId = categoryId;
     }
 
-    public String getCategoryName() {
-        return categoryName;
+    public Double getUnitPrice() {
+        return unitPrice;
     }
 
-    public void setCategoryName(String categoryName) {
-        this.categoryName = categoryName;
+    public void setUnitPrice(Double unitPrice) {
+        this.unitPrice = unitPrice;
     }
 
     @Override
     public String toString() {
-        return "Category{" +
-                "categoryId=" + categoryId +
-                ", categoryName='" + categoryName + '\'' +
+        return "Product{" +
+                "productId=" + productId +
+                ", productName='" + productName + '\'' +
+                ", categoryId=" + categoryId +
+                ", unitPrice=" + unitPrice +
                 '}';
     }
 
